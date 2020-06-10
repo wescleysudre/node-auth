@@ -1,6 +1,6 @@
 var Person = require("../models/Person");
 
-module.export = {
+module.exports = {
   all: function (req, res) {
     Person.find({}).lean().exec(function (err, people) {
       if (err)

@@ -1,12 +1,13 @@
-var express = require("express");
-var bodyparser = require("body-parser");
-var mongoose = require("mongoose");
-var cors = require("cors");
-var app = express;
+const express = require('express');
+const bodyParser = require('body-parser');
+const mongoose = require('mongoose');
+const cors = require("cors");
+const app = express();
+
 var api = require("./routes/api");
 
-app.use(bodyparser.json());
-app.use(bodyparser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors());
 
 mongoose.connect(
